@@ -1,0 +1,43 @@
+Site: Aluguel de veiculos
+
+CT001 - Deve ser capaz de alugar um veiculo
+	Fazar cadastro
+		-Nome
+		-CPF
+	        -Data Nascimento (SECGURO)
+		-Sexo (TAXA DE ALUGUEL - SEGURO)
+		-Numero Carteira de habilitação	
+		-Data habilitação (Taxa e Seguro)
+		-Numero do cartão (CVC e data final)
+	Deve ser gerado o IDcliente
+		-MCP827328372
+	Deve fazer a escolha de veiculo
+		-PLACA
+		-COR
+		-TIPO (TAXA)
+		-MARCA (TAXA)
+		-NOME	
+		-ESTADO	(TAXA)
+		-VALOR
+	Deve confirmar o aluguel do veiculo
+		-Tem certeza que deseja confirmar
+	Deve gerar o boleto com taxas inclusas
+		-Data Nascimento (SECGURO)
+		-Sexo (TAXA DE ALUGUEL - SEGURO)
+		-Numero Carteira de habilitação	
+		-Data habilitação (Taxa e Seguro)
+		-Data habilitação (Taxa e Seguro)
+		-TIPO (TAXA)
+		-MARCA (TAXA)
+		-ESTADO	(TAXA)
+		-VALOR
+	Deve confirmar pagamento
+		-Escolher o cartão
+		-Apresnetar autenticação de pagamento	
+
+CT002 - Deve ser capaz filtrar o veiculo
+		-Marca
+		-Tipo
+		-Valor
+		
+		-

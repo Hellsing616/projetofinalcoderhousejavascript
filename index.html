@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Sua Página</title>
+    <link rel="stylesheet" href="asserts/css/style.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    
+</head>
+<body>
+
+    <!-- Menu Superior -->
+    <nav id="menu" class="navbar navbar-expand-lg navbar-light">
+        <a class="jumbotron"><img src="asserts/img/real.JPG"></a>
+        <ul>
+            <li> <h1>Seu veiculo na sua mão.</h1></li>
+            <li> <h4>Veiculos novos. Semi novos. Com o preço que voce pode pagar</h4></li>
+            <li> <button class="btn btn-light ml-auto" data-toggle="modal" data-target="#formularioModal">CADASTRAR</button></li>
+        </ul>
+    </nav>
+
+    <!-- Formulário Modal -->
+    <div class="modal fade" id="formularioModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <!-- Adicione aqui o conteúdo do formulário -->
+    </div>
+    
+    <!-- Corpo da Página -->
+    <div id="corpo" class="container-fluid">
+      <form>
+        <h1> Faço seu cadastro para receber ofertas</h1>
+        <div class="form-row">
+          <div class="form-group col-md-3">
+            <label for="inputnome">Nome</label>
+            <input type="nome" class="form-control" id="inputnome" placeholder="Digite seu nome">
+          </div>
+          <div class="form-group col-md-3">
+            <label for="inputcpf">CPF</label>
+            <input type="text" class="form-control" id="inputcpf" placeholder="CPF">
+          </div>
+          <div class="form-group col-md-3">
+            <label for="inputdtnascimento">Data nascimento</label>
+            <input type="text" class="form-control" id="inputdtnascimento" placeholder="Data de nasciemnto">
+          </div>
+          <div class="form-group col-md-3">
+            <label for="inputsexo">Sexo</label>
+            <input type="text" class="form-control" id="inputsexo" placeholder="">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="form-row">
+            <div class="form-group col-md-3">
+              <label for="inputCartao">N° Cartão</label>
+              <input type="text" class="form-control" id="inputCartao" placeholder="0000.0000.0000.000">
+            </div>
+            <div class="form-group col-md-3">
+              <label for="inputHabilitacao">N° Carteira de habilitação	</label>
+              <input type="text" class="form-control" id="inputHabilitacao">
+            </div>
+            <div class="form-group col-md-3">
+              <label for="inputdthabilitaco">Data Carteira de habilitação	</label>
+              <input type="text" class="form-control" id="inputdthabilitaco">
+            </div>         
+          </div>
+        </div>       
+        <div class="form-row">
+          <div class="form-group col-md-3">
+            <label for="inputAddress">Endereço</label>
+            <input type="text" class="form-control" id="inputAddress" placeholder="Rua dos Bobos, nº 0">
+          </div>
+          <div class="form-group col-md-3">
+            <label for="inputCity">Cidade</label>
+            <input type="text" class="form-control" id="inputCity">
+          </div>
+          <div class="form-group col-md-3">
+            <label for="inputEstado">Estado</label>
+            <select id="inputEstado" class="form-control">
+              <option selected>Veículos</option>
+              <option>Novos</option>
+              <option>Semi Novos</option>
+              <option>Usados</option>
+            </select>
+          </div>
+          <div class="form-group col-md-3">
+            <label for="inputCEP">CEP</label>
+            <input type="text" class="form-control" id="inputCEP">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="gridCheck">
+            <label class="form-check-label" for="gridCheck">
+              Clique em mim
+            </label>
+          </div>
+        </div>
+    <button class="btn btn-primary" onclick="gerarIDdepagamentoSimplificado()">Gerar Oferta</button>
+      </form>
+        <div class="row">
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" src="asserts/img/carros/argo.jpg" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
+                <div class="card-body">
+                  <ul>
+                    <li> Pessoas: 5    | Bagageiro: 2 malas</li>
+                    <li> Cambio: Auto  | Arcondicionado</li>
+                  </ul>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Alugar</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Hoje: 3.51,00</button>
+                    </div>
+                    <small class="text-muted">9 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" src="asserts/img/carros/versa.jpg" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
+                <div class="card-body">
+                  <p class="card-text"></p>
+                  <ul>
+                    <li> Pessoas: 5    | Bagageiro: 2 malas</li>
+                    <li> Cambio: Auto  | Arcondicionado</li>
+                  </ul>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Alugar</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Hoje: 3.150,00</button>
+                    </div>
+                    <small class="text-muted">9 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" src="asserts/img/carros/creta.jpg" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
+                <div class="card-body">
+                  <ul>
+                    <li> Pessoas: 5    | Bagageiro: 2 malas</li>
+                    <li> Cambio: Auto  | Arcondicionado</li>
+                  </ul>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Alugar</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Hoje: 4.56,00</button>
+                    </div>
+                    <small class="text-muted">9 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" src="asserts/img/carros/hb20.jpg" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
+                <div class="card-body">
+                  <ul>
+                    <li> Pessoas: 5    | Bagageiro: 2 malas</li>
+                    <li> Cambio: Auto  | Arcondicionado</li>
+                  </ul>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Alugar</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Hoje: 2.06,00</button>
+                    </div>
+                    <small class="text-muted">9 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" src="asserts/img/carros/mobile.jpg" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
+                <div class="card-body">
+                  <ul>
+                    <li> Pessoas: 5    | Bagageiro: 2 malas</li>
+                    <li> Cambio: Auto  | Arcondicionado</li>
+                  </ul>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Alugar</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Hoje: 1.16,00</button>
+                    </div>
+                    <small class="text-muted">9 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" src="asserts/img/carros/polo.jpg" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
+                <div class="card-body">
+                  <ul>
+                    <li> Pessoas: 5    | Bagageiro: 2 malas</li>
+                    <li> Cambio: Auto  | Arcondicionado</li>
+                  </ul>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Alugar</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Hoje: 1.56,00</button>
+                    </div>
+                    <small class="text-muted">9 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" src="asserts/img/carros/pulse.jpg" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
+                <div class="card-body">
+                  <ul>
+                    <li> Pessoas: 5    | Bagageiro: 2 malas</li>
+                    <li> Cambio: Auto  | Arcondicionado</li>
+                  </ul>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Alugar</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Hoje: 2.00,00</button>
+                    </div>
+                    <small class="text-muted">9 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" src="asserts/img/carros/renegate.jpg" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
+                <div class="card-body">
+                  <ul>
+                    <li> Pessoas: 5    | Bagageiro: 2 malas</li>
+                    <li> Cambio: Auto  | Arcondicionado</li>
+                  </ul>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Alugar</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Hoje: 3.56,00</button>
+                    </div>
+                    <small class="text-muted">9 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" src="asserts/img/carros/strada.jpg" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
+                <div class="card-body">
+                  <ul>
+                    <li> Pessoas: 5    | Bagageiro: 2 malas</li>
+                    <li> Cambio: Auto  | Arcondicionado</li>
+                  </ul>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Alugar</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Hoje: 2.56,00</button>
+                    </div>
+                    <small class="text-muted">9 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+
+    <!-- Rodapé -->
+    <div id="rodape">
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="#">Contatos</a></li>
+            <li class="list-inline-item"><a href="#">Quem Somos</a></li>
+            <li class="list-inline-item"><a href="#">Fale Conosco</a></li>
+            <li class="list-inline-item"><a href="#">Onde Estamos</a></li>
+            <li class="list-inline-item"><a href="#">Deseja Ajuda</a></li>
+        </ul>
+    </div>
+
+    <!-- Bootstrap JS e dependências -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- Seu script JavaScript para gerar números aleatórios e salvar no Storage -->
+    <script src="asserts/js/script.js"></script>
+</body>
+</html>
